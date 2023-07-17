@@ -38,7 +38,7 @@ const svgLoader = {
   use: ["@svgr/webpack"],
 };
 const fileLoader = {
-  test: /\.(png|jpe?g|gif)$/i,
+  test: /\.(png|jpe?g|gif|woff2|woff|ttf)$/i,
   use: [
     {
       loader: "file-loader",

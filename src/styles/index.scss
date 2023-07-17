@@ -1,11 +1,9 @@
 @import "reset";
 @import "fonts";
 @import "variables";
-@import "other";
-
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   color: var(--text);
   background: var(--background);
   font-weight: 400;

@@ -3,4 +3,4 @@ import "@/styles/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
-root.render(<div>кто я</div>);
+root.render(<div>hello</div>);
