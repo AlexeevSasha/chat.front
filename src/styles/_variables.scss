@@ -1,22 +1,69 @@
 :root {
-  --black: #161e25;
+  --font-family: Montserrat, sans-serif;
+
+  // sm
+  --font-size-sm: 12px;
+  --font-line-sm: 20px;
+  --font-sm: var(--font-size-sm) / var(--font-line-sm) var(--font-family);
+
+  // md
+  --font-size-md: 16px;
+  --font-line-md: 24px;
+  --font-md: var(--font-size-md) / var(--font-line-md) var(--font-family);
+
+  // lg
+  --font-size-lg: 24px;
+  --font-line-lg: 32px;
+  --font-lg: var(--font-size-lg) / var(--font-line-lg) var(--font-family);
+
+  // xl
+  --font-size-xl: 32px;
+  --font-line-xl: 40px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family);
+
+  // element sizes
+  --navbar-height: 50px;
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 80px;
+
+  // z-index
+  --modal-z-index: 1000;
+  --overlay-z-index: 100;
+
+  // color
+  --black: #161E25;
   --white: white;
   --error: #ff785a;
-  --blue: #5383c7;
-  --shadow-modal: 0 0 8px 0 rgb(34 60 80 / 20%);
+  --blue: #5383C7;
+  --shadow-modal: 0 0 8px 0 rgba(34, 60, 80, 0.2);
+
+  //button
+  --button-bg-main: #248BF2;
+  --button-bg-main-hover: #39F;
+  --button-bg-main-active: #1677D9;
+  --button-color-main: #FFFFFF;
+  --button-bg-gray: #C9CCD1;
+  --button-bg-gray-hover: #EBEDF0;
+  --button-bg-gray-active: #E6E7EB;
+  --button-color-gray: #71747A;
+  --button-color-gray-hover: #A4A6AA;
+  --button-color-gray-active: #BBBDC0;
+  --button-bg-red: #F23051;
+  --button-bg-red-hover: #FF4060;
+  --button-bg-red-active: #D92140;
 }
 
 :root[data-theme="light"] {
-  --background: #f2f3f3;
-  --input: #fbfbfb;
+  --background: #F2F3F3;
+  --input: #FBFBFB;
   --input-border: #bfbfbf;
-  --input-color: #202020;
+  --input-color:#202020;
   --input-placholder: #626364;
   --icon-color: #212121;
-  --icon-bg: #e6e6e6;
+  --icon-bg: #E6E6E6;
   --text: #202020;
-  --text-second: #5b5c5e;
-  --conversation-active: #419fd9;
+  --text-second: #5B5C5E;
+  --conversation-active: #419FD9;
   --conversation-hover: #e8e8e8;
   --conversation-ripple: #4d4d4d;
   --blue-hover: #1d4e95;
@@ -27,19 +74,19 @@
 
 :root[data-theme="dark"] {
   --background: #202020;
-  --input: #2d2e2f;
+  --input: #2D2E2F;
   --input-border: #404040;
   --input-color: #fff;
   --input-placholder: #bfbfbf;
   --icon-color: #fff;
   --icon-bg: #414141;
   --text: #fff;
-  --text-second: #a3a6aa;
+  --text-second: #A3A6AA;
   --conversation-active: #1a324d;
   --conversation-hover: #2c2c2c;
   --conversation-ripple: #808080;
   --blue-hover: #246bce;
-  --border: #555;
+  --border: #555555;
   --scroll-track: #3f4242;
   --scroll-thumb: #b6b6b6;
 }
