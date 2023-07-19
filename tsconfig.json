@@ -29,7 +29,8 @@
       "module": "CommonJS"
     },
     "include": [
-      "src/common/types/global"
+      "./src/common/types/global",
+      "./config/jest/jest.setup.ts",
     ]
   }
 }

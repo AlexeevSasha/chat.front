@@ -13,6 +13,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier",
+    "plugin:storybook/recommended",
     "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
