@@ -11,11 +11,12 @@
     "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "stylelint": "npx stylelint \"**/*.scss\"",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
+    "prettier": "npx prettier src --check",
     "prettier:fix": "npx prettier src --write",
     "format": "yarn lint:fix && yarn stylelint:fix && yarn prettier:fix",
     "jest": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook"
   },
   "author": "",
   "license": "ISC",

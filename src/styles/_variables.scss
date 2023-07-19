@@ -31,39 +31,39 @@
   --overlay-z-index: 100;
 
   // color
-  --black: #161E25;
+  --black: #161e25;
   --white: white;
   --error: #ff785a;
-  --blue: #5383C7;
+  --blue: #5383c7;
   --shadow-modal: 0 0 8px 0 rgba(34, 60, 80, 0.2);
 
   //button
-  --button-bg-main: #248BF2;
-  --button-bg-main-hover: #39F;
-  --button-bg-main-active: #1677D9;
-  --button-color-main: #FFFFFF;
-  --button-bg-gray: #C9CCD1;
-  --button-bg-gray-hover: #EBEDF0;
-  --button-bg-gray-active: #E6E7EB;
-  --button-color-gray: #71747A;
-  --button-color-gray-hover: #A4A6AA;
-  --button-color-gray-active: #BBBDC0;
-  --button-bg-red: #F23051;
-  --button-bg-red-hover: #FF4060;
-  --button-bg-red-active: #D92140;
+  --button-bg-main: #248bf2;
+  --button-bg-main-hover: #39f;
+  --button-bg-main-active: #1677d9;
+  --button-color-main: #ffffff;
+  --button-bg-gray: #c9ccd1;
+  --button-bg-gray-hover: #ebedf0;
+  --button-bg-gray-active: #e6e7eb;
+  --button-color-gray: #71747a;
+  --button-color-gray-hover: #a4a6aa;
+  --button-color-gray-active: #bbbdc0;
+  --button-bg-red: #f23051;
+  --button-bg-red-hover: #ff4060;
+  --button-bg-red-active: #d92140;
 }
 
 :root[data-theme="light"] {
-  --background: #F2F3F3;
-  --input: #FBFBFB;
+  --background: #f2f3f3;
+  --input: #fbfbfb;
   --input-border: #bfbfbf;
-  --input-color:#202020;
+  --input-color: #202020;
   --input-placholder: #626364;
   --icon-color: #212121;
-  --icon-bg: #E6E6E6;
+  --icon-bg: #e6e6e6;
   --text: #202020;
-  --text-second: #5B5C5E;
-  --conversation-active: #419FD9;
+  --text-second: #5b5c5e;
+  --conversation-active: #419fd9;
   --conversation-hover: #e8e8e8;
   --conversation-ripple: #4d4d4d;
   --blue-hover: #1d4e95;
@@ -74,14 +74,14 @@
 
 :root[data-theme="dark"] {
   --background: #202020;
-  --input: #2D2E2F;
+  --input: #2d2e2f;
   --input-border: #404040;
   --input-color: #fff;
   --input-placholder: #bfbfbf;
   --icon-color: #fff;
   --icon-bg: #414141;
   --text: #fff;
-  --text-second: #A3A6AA;
+  --text-second: #a3a6aa;
   --conversation-active: #1a324d;
   --conversation-hover: #2c2c2c;
   --conversation-ripple: #808080;
