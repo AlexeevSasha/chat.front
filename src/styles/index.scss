@@ -3,7 +3,7 @@
 @import "variables";
 
 body {
-  font-family: Montserrat, sans-serif;
+  font: var( --font-md);
   color: var(--text);
   background: var(--background);
   font-weight: 400;

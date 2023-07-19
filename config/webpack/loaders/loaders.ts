@@ -1,6 +1,6 @@
 import { RuleSetRule } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { WebpackOptions } from "./types/webpack";
+import { WebpackOptions } from "../types/webpack";
+import { cssLoader } from "./cssLoader";
 
 const tsLoader = {
   test: /\.tsx?$/,
@@ -17,22 +17,6 @@ const babelLoader = {
     },
   },
 };
-const cssLoader = (isDev: boolean) => ({
-  test: /\.s[ac]ss?$/,
-  use: [
-    isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-    {
-      loader: "css-loader",
-      options: {
-        modules: {
-          auto: /\.module\.scss$/,
-          localIdentName: isDev ? "[path][name]__[local]--[hash:base64:5]" : "[hash:base64:8]",
-        },
-      },
-    },
-    "sass-loader",
-  ],
-});
 const svgLoader = {
   test: /\.svg$/,
   use: ["@svgr/webpack"],

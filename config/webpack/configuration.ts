@@ -1,7 +1,7 @@
 import { Configuration } from "webpack";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { WebpackOptions } from "./types/webpack";
-import { loaders } from "./loaders";
+import { loaders } from "./loaders/loaders";
 import { plugins } from "./plugins";
 import { devServer } from "./devServer";
 
