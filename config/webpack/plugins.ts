@@ -4,18 +4,25 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { WebpackOptions } from "./types/webpack";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
-export const plugins = (options: WebpackOptions): WebpackPluginInstance[] => [
-  new HTMLWebpackPlugin({
-    template: options.paths.html,
-  }),
-  new ProgressPlugin(),
-  new MiniCssExtractPlugin({
-    filename: "css/[name].[contenthash:8].css",
-    chunkFilename: "css/[name].[contenthash:8].css",
-  }),
-  new DefinePlugin({
-    __IS_DEV__: JSON.stringify({ isDev: options.isDev }),
-  }),
-  new HotModuleReplacementPlugin(),
-  new BundleAnalyzerPlugin({ openAnalyzer: false }),
-];
+export const plugins = (options: WebpackOptions): WebpackPluginInstance[] => {
+  const allPlugins = [
+    new HTMLWebpackPlugin({
+      template: options.paths.html,
+    }),
+    new ProgressPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].[contenthash:8].css",
+      chunkFilename: "css/[name].[contenthash:8].css",
+    }),
+    new DefinePlugin({
+      __IS_DEV__: JSON.stringify({ isDev: options.isDev }),
+    }),
+  ];
+
+  if (options.isDev) {
+    allPlugins.push(new HotModuleReplacementPlugin());
+    allPlugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+  }
+
+  return allPlugins;
+};
