@@ -1,5 +1,5 @@
 :root {
-  --font-family: Montserrat, sans-serif;
+  --font-family: montserrat, sans-serif;
 
   // sm
   --font-size-sm: 12px;
@@ -35,13 +35,13 @@
   --white: white;
   --error: #ff785a;
   --blue: #5383c7;
-  --shadow-modal: 0 0 8px 0 rgba(34, 60, 80, 0.2);
+  --shadow-modal: 0 0 8px 0 rgb(34 60 80 / 20%);
 
-  //button
+  //  button
   --button-bg-main: #248bf2;
   --button-bg-main-hover: #39f;
   --button-bg-main-active: #1677d9;
-  --button-color-main: #ffffff;
+  --button-color-main: #fff;
   --button-bg-gray: #c9ccd1;
   --button-bg-gray-hover: #ebedf0;
   --button-bg-gray-active: #e6e7eb;
@@ -86,7 +86,7 @@
   --conversation-hover: #2c2c2c;
   --conversation-ripple: #808080;
   --blue-hover: #246bce;
-  --border: #555555;
+  --border: #555;
   --scroll-track: #3f4242;
   --scroll-thumb: #b6b6b6;
 }
