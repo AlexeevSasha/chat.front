@@ -2,6 +2,7 @@ import type { Preview } from "@storybook/react";
 import { StyleDecorator } from "./decorators/style";
 import { ThemeDecorator } from "./decorators/theme";
 import { ThemeEnum } from "@/common/types/theme";
+import { RouterDecorator } from "./decorators/router";
 
 const preview: Preview = {
   parameters: {
@@ -13,7 +14,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [StyleDecorator, ThemeDecorator(ThemeEnum.LIGHT)],
+  decorators: [StyleDecorator, ThemeDecorator(ThemeEnum.LIGHT), RouterDecorator],
 };
 
 export default preview;
