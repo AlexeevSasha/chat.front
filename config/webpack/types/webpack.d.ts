@@ -4,6 +4,7 @@ export interface WebpackPaths {
   entry: string;
   dist: string;
   html: string;
+  favicon: string;
   src: string;
   tsconfig: string;
 }

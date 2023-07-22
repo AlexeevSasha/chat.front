@@ -1,7 +1,7 @@
 import webpack, { RuleSetRule } from "webpack";
 import path from "path";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
-import { cssLoader } from "../webpack/loaders/cssLoader";
+import { cssLoader } from "../webpack/loaders/css";
 
 export default ({ config }: { config: webpack.Configuration }) => {
   config.resolve.plugins = config.resolve.plugins || [];

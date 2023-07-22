@@ -1,4 +1,4 @@
-import { DefinePlugin, ProgressPlugin, WebpackPluginInstance, HotModuleReplacementPlugin } from "webpack";
+import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance } from "webpack";
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { WebpackOptions } from "./types/webpack";
@@ -8,6 +8,7 @@ export const plugins = (options: WebpackOptions): WebpackPluginInstance[] => {
   const allPlugins = [
     new HTMLWebpackPlugin({
       template: options.paths.html,
+      favicon: options.paths.favicon,
     }),
     new ProgressPlugin(),
     new MiniCssExtractPlugin({

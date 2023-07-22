@@ -6,6 +6,7 @@ const paths: WebpackPaths = {
   entry: path.resolve(__dirname, "src", "index.tsx"),
   dist: path.resolve(__dirname, "dist"),
   html: path.resolve(__dirname, "public", "index.html"),
+  favicon: path.resolve(__dirname, "public", "favicon.svg"),
   src: path.resolve(__dirname, "src"),
   tsconfig: path.resolve(__dirname, "tsconfig.json"),
 };
