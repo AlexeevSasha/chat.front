@@ -60,6 +60,14 @@
         "component": true,
         "html": true
       }
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Function": false
+        }
+      }
     ]
   },
   "globals": {
