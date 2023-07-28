@@ -13,12 +13,14 @@ export const fileLoader = [
     ],
   },
   {
-    test: /\.(png|jpe?g|gif|svg)$/i,
+    test: /\.(png|jpe?g|gif)$/i,
+    type: "javascript/auto",
     use: [
       {
         loader: "file-loader",
         options: {
-          outputPath: "assets/",
+          name: "[name].[ext]",
+          outputPath: "assets/image",
         },
       },
     ],

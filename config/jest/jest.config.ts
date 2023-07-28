@@ -11,7 +11,7 @@ export default {
   rootDir: "../../",
   moduleNameMapper: {
     "\\.s?css$": "identity-obj-proxy",
-    "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+    "\\.svg": path.resolve(__dirname, "jest.empty.tsx"),
     "^@/(.*)$": "<rootDir>/src/$1",
   },
 };
