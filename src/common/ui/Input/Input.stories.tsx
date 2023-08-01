@@ -13,6 +13,8 @@ export default meta;
 
 export const Text: Story = {
   args: {
+    id: "test",
+    name: "test",
     type: "text",
     placeholder: "Placeholder",
   },
@@ -20,6 +22,8 @@ export const Text: Story = {
 
 export const Password: Story = {
   args: {
+    id: "password",
+    name: "password",
     type: "password",
     placeholder: "Placeholder",
   },
@@ -27,7 +31,8 @@ export const Password: Story = {
 
 export const Error: Story = {
   args: {
-    type: "test",
+    id: "error",
+    name: "error",
     placeholder: "Placeholder",
     value: "error",
     error: "Error text",
@@ -36,7 +41,8 @@ export const Error: Story = {
 
 export const Disable: Story = {
   args: {
-    type: "test",
+    id: "disabled",
+    name: "disabled",
     placeholder: "Placeholder",
     disabled: true,
   },
