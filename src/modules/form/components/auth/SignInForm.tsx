@@ -28,7 +28,9 @@ export const SignInForm = () => {
         type={"password"}
         placeholder={"Password"}
       />
-      <Button type={"submit"}>Send</Button>
+      <Button size={"lg"} type={"submit"}>
+        Send
+      </Button>
     </form>
   );
 };

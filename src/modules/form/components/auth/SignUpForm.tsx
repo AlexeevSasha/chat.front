@@ -46,7 +46,9 @@ export const SignUpForm = () => {
         onChange={handleChange}
         error={errors?.password || ""}
       />
-      <Button type={"submit"}>Sing Up</Button>
+      <Button size={"lg"} type={"submit"}>
+        Sing Up
+      </Button>
     </form>
   );
 };
