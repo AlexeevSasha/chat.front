@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useCallback, useRef, useState } from "react";
 import { usePrevious } from "@/common/hooks/usePrevious";
 
 type IErrors<T> = Record<keyof T, string> | undefined;
+type Change = ChangeEvent<HTMLSelectElement | HTMLTextAreaElement | HTMLInputElement>;
 
 interface IForm<T> {
   initialValues: T;
@@ -21,15 +22,15 @@ export const useForm = <T extends Record<string, any>>({ initialValues, onSubmit
     setValues(initialValues);
   }, []);
 
-  const handleChange = useCallback(({ target }: ChangeEvent<HTMLElement>) => {
+  const handleChange = useCallback(({ target }: Change) => {
     const data: { key: keyof T; value: string | boolean } = { key: "", value: "" };
     if (target instanceof HTMLInputElement) {
       const { type, checked, value, name } = target;
       data.value = type === "checkbox" ? checked : value;
       data.key = name;
-    } else if (target instanceof HTMLTextAreaElement) {
-      data.value = target.value;
-      data.key = target.name;
+    } else {
+      data.value = target?.value || "";
+      data.key = target?.name || "";
     }
 
     const value = { [data.key]: data.value };

@@ -2,7 +2,7 @@
   cursor: pointer;
   background: var(--button-bg-main);
   color: var(--button-color-main);
-  padding: 6px 16px;
+  padding: 8px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,11 +21,11 @@
 }
 
 .sm {
-  padding: 4px 12px;
+  padding: 6px 16px;
 }
 
 .lg {
-  padding: 8px 24px;
+  padding: 10px 24px;
 }
 
 .fullWith {
