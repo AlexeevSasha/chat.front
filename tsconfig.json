@@ -8,7 +8,7 @@
       "DOM.Iterable",
       "ESNext"
     ],
-    "target": "ESNext",
+    "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",

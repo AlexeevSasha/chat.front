@@ -3,6 +3,7 @@ import HTMLWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { WebpackOptions } from "./types/webpack";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+import Dotenv from "dotenv-webpack";
 
 export const plugins = (options: WebpackOptions): WebpackPluginInstance[] => {
   const allPlugins = [
@@ -18,6 +19,7 @@ export const plugins = (options: WebpackOptions): WebpackPluginInstance[] => {
     new DefinePlugin({
       __IS_DEV__: JSON.stringify({ isDev: options.isDev }),
     }),
+    new Dotenv(),
   ];
 
   if (options.isDev) {
