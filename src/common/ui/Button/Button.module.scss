@@ -18,6 +18,11 @@
   &:active {
     background: var(--button-bg-main-active);
   }
+
+  &:disabled {
+    cursor: default;
+    background: var(--button-bg-gray);
+  }
 }
 
 .sm {

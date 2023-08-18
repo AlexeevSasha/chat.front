@@ -8,3 +8,8 @@ export const AuthProviderPaths = [
   { path: paths.register, element: <SignUpPage /> },
   { path: paths["404"], element: <Navigate to={"/login"} /> },
 ];
+
+export const PrivateProviderPaths = [
+  { path: paths.main, element: <div>lpox</div> },
+  { path: paths["404"], element: <Navigate to={"/im"} /> },
+];
