@@ -4,8 +4,13 @@ import { Input } from "@/common/ui/Input/Input";
 import { Button } from "@/common/ui/Button/Button";
 import styles from "./auth.form.module.scss";
 import { IAuthSighUp } from "@/modules/auth/interfaces/auth";
+import { useUserStore } from "@/modules/user/user.store";
+import { useState } from "react";
+import { Loader } from "@/common/components/Loader/Loader";
 
 export const SignUpForm = () => {
+  const signUp = useUserStore((state) => state.signUp);
+  const [loading, setLoading] = useState(false);
   const { values, handleChange, handleSubmit, errors } = useForm<IAuthSighUp>({
     initialValues: {
       firstname: "",
@@ -15,7 +20,8 @@ export const SignUpForm = () => {
     },
     validationSchema: signUpValidation,
     onSubmit: (values) => {
-      console.log(values);
+      setLoading(true);
+      signUp(values).finally(() => setLoading(false));
     },
   });
   return (
@@ -46,9 +52,10 @@ export const SignUpForm = () => {
         onChange={handleChange}
         error={errors?.password || ""}
       />
-      <Button size={"lg"} type={"submit"}>
+      <Button disabled={loading} size={"lg"} type={"submit"}>
         Sing Up
       </Button>
+      <Loader loading={loading} />
     </form>
   );
 };

@@ -3,13 +3,25 @@ import { IAuthResponse, IAuthSighIn, IAuthSighUp } from "@/modules/auth/interfac
 import { urlApiPath } from "@/common/constants/urlApiPath";
 
 export class AuthRequest extends BaseRequest {
-  signin(payload: IAuthSighIn) {
-    return this.post<IAuthResponse>(urlApiPath.auth.signin, JSON.stringify(payload));
+  async signin(payload: IAuthSighIn): Promise<IAuthResponse | void> {
+    try {
+      return await this.post<IAuthResponse>(urlApiPath.auth.signin, JSON.stringify(payload));
+    } catch (error) {
+      console.error("AuthRequest-signin", error);
+    }
   }
-  signup(payload: IAuthSighUp) {
-    return this.post<IAuthResponse>(urlApiPath.auth.signup, JSON.stringify(payload));
+  async signup(payload: IAuthSighUp): Promise<IAuthResponse | void> {
+    try {
+      return await this.post<IAuthResponse>(urlApiPath.auth.signup, JSON.stringify(payload));
+    } catch (error) {
+      console.error("AuthRequest-signup", error);
+    }
   }
-  logout() {
-    return this.get(urlApiPath.auth.logout);
+  async logout(): Promise<void> {
+    try {
+      await this.get(urlApiPath.auth.logout);
+    } catch (error) {
+      console.error("AuthRequest-logout", error);
+    }
   }
 }

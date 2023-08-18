@@ -4,8 +4,13 @@ import { signInValidation } from "@/modules/form/validation/auth/signIn.validati
 import { Input } from "@/common/ui/Input/Input";
 import { Button } from "@/common/ui/Button/Button";
 import { IAuthSighIn } from "@/modules/auth/interfaces/auth";
+import { useUserStore } from "@/modules/user/user.store";
+import { Loader } from "@/common/components/Loader/Loader";
+import { useState } from "react";
 
 export const SignInForm = () => {
+  const signIn = useUserStore((state) => state.signIn);
+  const [loading, setLoading] = useState(false);
   const { values, handleChange, handleSubmit, errors } = useForm<IAuthSighIn>({
     initialValues: {
       password: "",
@@ -13,7 +18,8 @@ export const SignInForm = () => {
     },
     validationSchema: signInValidation,
     onSubmit: (values) => {
-      console.log(values);
+      setLoading(true);
+      signIn(values).finally(() => setLoading(false));
     },
   });
   return (
@@ -28,9 +34,10 @@ export const SignInForm = () => {
         type={"password"}
         placeholder={"Password"}
       />
-      <Button size={"lg"} type={"submit"}>
+      <Button disabled={loading} size={"lg"} type={"submit"}>
         Send
       </Button>
+      <Loader loading={loading} />
     </form>
   );
 };

@@ -17,7 +17,7 @@ export const signInValidation = (values: IValues) => {
   if (!values.password) {
     errors.password = "Password is required";
   } else if (!passwordLengthRegex.test(values.password)) {
-    errors.password = "Password from 6 to 20 characters";
+    errors.password = "Password from 4 to 20 characters";
   } else if (!passwordUppercaseLetterRegex.test(values.password)) {
     errors.password = "Password must contain one or more uppercase letters";
   }
