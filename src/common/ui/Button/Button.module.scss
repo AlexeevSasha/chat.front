@@ -88,11 +88,15 @@
   padding: 0;
 
   svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     stroke: var(--icon-color);
     opacity: 1;
     z-index: 1;
+
+    path {
+      stroke: var(--icon-color);
+    }
   }
 
   &:hover {

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@/common/ui/Button/Button";
+import MenuIcon from "../../../../public/icon/menu.svg";
 
 type Story = StoryObj<typeof meta>;
 
@@ -22,5 +23,12 @@ export const Small: Story = {
   args: {
     size: "sm",
     children: "Text",
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    onlyIcon: true,
+    children: <MenuIcon />,
   },
 };
