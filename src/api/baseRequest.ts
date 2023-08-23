@@ -4,7 +4,7 @@ export class BaseRequest {
   baseApi: string;
 
   constructor() {
-    this.baseApi = process.env.BASE_URL;
+    this.baseApi = process.env.BASE_URL + "/api";
   }
 
   private handleError = (error: Error) => {

@@ -2,12 +2,12 @@ import { useCallback, useRef } from "react";
 import { useResizableWidth } from "@/common/hooks/useResizableWidth";
 import { Conversations } from "@/modules/conversation/components/Conversation";
 import { drawer } from "@/modules/popup/helpers/drawer";
-import { Input } from "@/common/ui/Input/Input";
 import { Button } from "@/common/ui/Button/Button";
 import { DashboardMenu } from "@/common/components/DashboardMenu/DashboardMenu";
 import MenuIcon from "../../../../public/icon/menu.svg";
 
 import styles from "./sideBar.module.scss";
+import { InputSearch } from "@/common/ui/InputSearch/InputSearch";
 
 export const SideBar = () => {
   const ref = useRef(null);
@@ -20,10 +20,10 @@ export const SideBar = () => {
   return (
     <aside style={{ width }} className={styles.container}>
       <div className={styles.containerMenu}>
-        <Button onClick={openDashboardMenu} onlyIcon>
+        <Button onClick={openDashboardMenu} isIcon>
           <MenuIcon />
         </Button>
-        <Input id={"search"} name={"search"} type={"search"} />
+        <InputSearch id={"search"} name={"search"} type={"search"} />
       </div>
       <Conversations />
       <div className={styles.verticalLine} ref={ref} />

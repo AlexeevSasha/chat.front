@@ -28,7 +28,7 @@ export const Small: Story = {
 
 export const Icon: Story = {
   args: {
-    onlyIcon: true,
+    isIcon: true,
     children: <MenuIcon />,
   },
 };
