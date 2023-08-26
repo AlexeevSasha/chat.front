@@ -1,6 +1,7 @@
 import { useCallback } from "react";
-import { IDrawer, IPopupParam } from "@/modules/popup/interfaces/drawer";
+import { IDrawer } from "@/modules/popup/interfaces/drawer";
 import { Drawer } from "@/modules/popup/components/drawer/Drawer";
+import { IPopupParam } from "@/modules/popup/interfaces/popup";
 
 export const useDrawer = ({ previous, setPopupsCb }: IPopupParam) => {
   const addDrawer = useCallback(

@@ -19,7 +19,7 @@ export class EventBus<T> {
     this.eventTarget.removeEventListener(type, listener as EventListener);
   }
 
-  emit(type: EventBusNamesEnum, detail: T) {
+  emit<E>(type: EventBusNamesEnum, detail: E extends unknown ? E : T) {
     return this.eventTarget.dispatchEvent(new CustomEvent(type, { detail }));
   }
 }

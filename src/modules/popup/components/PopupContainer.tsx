@@ -5,7 +5,7 @@ import { IRootPopup } from "@/modules/popup/interfaces/popup";
 import { usePrevious } from "@/common/hooks/usePrevious";
 
 export const PopupContainer = () => {
-  const [popups, setPopups] = useState<IRootPopup>({ drawer: new Map() });
+  const [popups, setPopups] = useState<IRootPopup>({ drawer: new Map(), modal: new Map() });
   const previous = usePrevious(popups);
 
   const setPopupsCb = useCallback(
