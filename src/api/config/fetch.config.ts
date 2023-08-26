@@ -10,7 +10,7 @@ const originalFetch = fetch;
 fetch = (...args: [input: RequestInfo | URL, init?: RequestInit | undefined]): Promise<Response> => {
   return originalFetch.apply(this, args).then(async (data) => {
     if (data.status === 401) {
-      const response = await originalFetch(process.env.BASE_URL + urlApiPath.auth.refresh, {
+      const response = await originalFetch(process.env.BASE_URL + "/api" + urlApiPath.auth.refresh, {
         method: "GET",
         credentials: "include",
       });

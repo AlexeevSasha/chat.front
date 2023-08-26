@@ -1,3 +1,4 @@
+import "@/api/config/fetch.config";
 import ReactDOM from "react-dom/client";
 import { RouterCustomProvider } from "@/common/components/RouterProvider";
 import { ToastContainer } from "react-toastic";
