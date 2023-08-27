@@ -55,6 +55,8 @@
 
 :root[data-theme="light"] {
   --background: #f2f3f3;
+  --background-block: #fbfbfb;
+  --gray: #bbb;
   --input: #fbfbfb;
   --input-border: #bfbfbf;
   --input-color: #202020;
@@ -74,6 +76,8 @@
 
 :root[data-theme="dark"] {
   --background: #202020;
+  --background-block: #2d2e2f;
+  --gray: #4c4c4c;
   --input: #2d2e2f;
   --input-border: #404040;
   --input-color: #fff;
