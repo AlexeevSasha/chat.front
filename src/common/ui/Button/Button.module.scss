@@ -37,6 +37,12 @@
   width: 100%;
 }
 
+.notHover {
+  &:hover {
+    background: transparent !important;
+  }
+}
+
 .gray {
   background: var(--button-bg-gray);
   color: var(--button-color-gray);
@@ -96,10 +102,16 @@
 
     path {
       stroke: var(--icon-color);
+      fill: var(--icon-color);
     }
   }
 
   &:hover {
     background: var(--icon-bg);
   }
+}
+
+.iconSm {
+  width: 24px;
+  height: 24px;
 }

@@ -5,4 +5,9 @@ export const urlApiPath = {
     logout: "/auth/logout",
     refresh: "/auth/refresh",
   },
+  friend: {
+    invite: "/friend/invite",
+    accept: "/friend/accept",
+    reject: "/friend/reject",
+  },
 };

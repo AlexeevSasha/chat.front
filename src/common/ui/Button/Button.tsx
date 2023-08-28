@@ -8,6 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWith?: boolean;
   color?: ButtonColor;
   size?: ButtonSize;
+  notHover?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({ children, ...attr }: ButtonProps) => {
@@ -16,6 +17,8 @@ export const Button: FC<ButtonProps> = ({ children, ...attr }: ButtonProps) => {
     [cls[attr.size]]: !!attr.size,
     [cls.fullWith]: attr.fullWith,
     [cls.icon]: attr.isIcon,
+    [cls.iconSm]: attr.size == "sm" && attr.isIcon,
+    [cls.notHover]: attr.notHover,
   });
 
   return (

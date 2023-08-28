@@ -11,11 +11,9 @@ import "react-toastic/dist/style.css";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
-  <>
-    <ContextProvider>
-      <RouterCustomProvider />
-    </ContextProvider>
-    <ToastContainer />
+  <ContextProvider>
+    <RouterCustomProvider />
     <PopupContainer />
-  </>,
+    <ToastContainer />
+  </ContextProvider>,
 );

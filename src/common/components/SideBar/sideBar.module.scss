@@ -8,11 +8,12 @@
 
 .containerMenu {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 40px 1fr 40px;
   grid-column-gap: 10px;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 4px 0 10px;
   margin-bottom: 10px;
+  height: 45px;
 }
 
 .verticalLine {

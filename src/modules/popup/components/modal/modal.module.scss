@@ -17,9 +17,12 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 100;
   width: 100%;
   padding: 8px;
+
+  & > * {
+    z-index: 100;
+  }
 
   @include mixin.popup(openModal);
 
