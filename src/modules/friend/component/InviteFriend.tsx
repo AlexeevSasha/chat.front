@@ -5,7 +5,7 @@ import { InviteFriendForm } from "@/modules/form/components/friend/InviteFriendF
 
 export const InviteFriend = () => {
   return (
-    <Button onClick={() => modal.open({ title: "test", children: (id) => <InviteFriendForm formId={id} /> })} isIcon>
+    <Button onClick={() => modal.open({ children: (id) => <InviteFriendForm formId={id} /> })} isIcon>
       <PlusIcon />
     </Button>
   );
