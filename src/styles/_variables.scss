@@ -21,11 +21,6 @@
   --font-line-xl: 40px;
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family);
 
-  // element sizes
-  --navbar-height: 50px;
-  --sidebar-width: 300px;
-  --sidebar-width-collapsed: 80px;
-
   // z-index
   --modal-z-index: 1000;
   --overlay-z-index: 100;
@@ -33,6 +28,7 @@
   // color
   --black: #161e25;
   --white: white;
+  --green: green;
   --error: #ff785a;
   --blue: #5383c7;
   --shadow-modal: 0 0 8px 0 rgb(34 60 80 / 20%);

@@ -9,7 +9,7 @@ export const useModal = ({ previous, setPopupsCb }: IPopupParam) => {
       const map = previous.current["modal"];
       map.set(
         detail.id,
-        <Modal key={detail.id} id={detail.id} title={detail.title}>
+        <Modal key={detail.id} id={detail.id}>
           {detail.children}
         </Modal>,
       );

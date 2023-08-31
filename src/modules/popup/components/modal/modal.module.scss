@@ -22,12 +22,14 @@
 
   & > * {
     z-index: 100;
+
+    @include mixin.popup(openModal);
   }
 
-  @include mixin.popup(openModal);
-
   &Close {
-    @include mixin.popup(closeModal);
+    & > * {
+      @include mixin.popup(closeModal);
+    }
   }
 }
 
