@@ -5,6 +5,7 @@ import { ButtonColor, ButtonSize } from "@/common/types/button";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isIcon?: boolean;
+  isIconSaveColor?: boolean;
   fullWith?: boolean;
   color?: ButtonColor;
   size?: ButtonSize;
@@ -17,6 +18,7 @@ export const Button: FC<ButtonProps> = ({ children, ...attr }: ButtonProps) => {
     [cls[attr.size]]: !!attr.size,
     [cls.fullWith]: attr.fullWith,
     [cls.icon]: attr.isIcon,
+    [cls.iconSvg]: attr.isIcon && !attr.isIconSaveColor,
     [cls.iconSm]: attr.size == "sm" && attr.isIcon,
     [cls.notHover]: attr.notHover,
   });
